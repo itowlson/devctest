@@ -15,3 +15,5 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 # Install additional rust components (rust-analyzer)
 ARG RUST_ANALYZER_URL="https://github.com/rust-lang/rust-analyzer/releases/download/2022-04-11/rust-analyzer-x86_64-unknown-linux-gnu.gz"
 RUN curl -sL "$RUST_ANALYZER_URL" | gunzip -c - > /usr/local/bin/rust-analyzer && chmod +x /usr/local/bin/rust-analyzer
+
+RUN rustup target add wasm32-wasi
