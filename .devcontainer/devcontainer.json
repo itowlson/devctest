@@ -43,11 +43,6 @@
                 "rust-lang.rust-analyzer",
                 "serayuzgur.crates"
             ]
-        },
-        "codespaces": {
-            "openFiles": [
-                "quickstart-codespaces.md"
-            ]
         }
     },
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -60,9 +55,8 @@
     "forwardPorts": [
         3000
     ],
-    // TODO: why can't we use onCreateCommand to do this?  Or make it a feature?
-    // Or contribute "targets" as an option on the Rust feature
-    "postAttachCommand": "rustup target add wasm32-wasi",
+    // TODO: contribute "targets" as an option on the Rust feature?
+    "onCreateCommand": "rustup target add wasm32-wasi",
     // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
     "remoteUser": "vscode"
 }
