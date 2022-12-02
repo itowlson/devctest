@@ -10,9 +10,5 @@
             "default": "latest",
             "description": "Select or enter a version."
         }
-    },
-    "install": {
-        "app": "",
-        "file": "install.sh"
     }
 }

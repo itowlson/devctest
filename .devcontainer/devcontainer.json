@@ -23,7 +23,6 @@
             "version": "latest",
             "ppa": "false"
         },
-        // TODO: we could make a devcontainers-contrib or our own feature for this
         "./spin": "latest"
     },
     // Configure tool-specific properties.
